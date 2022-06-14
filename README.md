@@ -55,3 +55,59 @@ Here, the continuous variables gives us some interresting information:
 - The retained costumers present mostly one or two products.
 - The estimated salary do not seems to be different between the churned and retained costumers.
 
+#### let's check the density of Age and Balance descriptors:
+
+##### Age
+![density_age](Results/density_age.png)
+
+    The avgerage age of churned costumers is 44.84 against 37.41 for the retained costumers
+
+Indeed, the average age of the cherned costumers is higher than the retained costumers (37 vs 45).
+This information is crucial for the modeling.
+
+##### Balance
+
+![Density_Balances](Results/Density_Balance.png)
+
+    The avgerage age of churned costumers is 91108.54 against 72745.3 for the retained costumers
+
+For the balcance, we can see two peaks both distributions: 0 and around 125 000. we can see that there are more costumers with a balance = 0 that stayed on the bank. This is even more visble on the following barplot:
+
+![count_balance_zeros](Results/count_balance_zeros.png)
+
+I noticed that the costumers with a non-null balance are part of the retained costumers. Let's make a categorical variable based on this information.
+
+# 3. Data preprocessing
+
+## Descriptor  Engineering
+
+I made two observations on the continuous variables:
+
+(1) Costumers with a high number of products tend to leave the bank
+(2) Costumers with a balance non-null tend to leave the bank
+
+let's make two descriptors based on these observations
+
+## Dropping of the non-useful descriptors
+
+Based of the last analysis we point out some non-essential features: 'Tenure', 'HasCrCard', 'EstimatedSalary'. Let's drop them!
+
+## Encoding of categorical descriptors
+
+Encoding of: 
+
+- The gender (1: Male;0: female)
+- Geography. As Mentioned above, I will merge spain and french costumers (0: Spain + France; 1: Germany)
+- for the active members, I will change the coding for -1 when the costumers is an aactive member.
+
+
+## Scaling the continuous descriptors
+
+I will scale the continuous descriptors with the standard Scaler.
+
+# Models Building
+
+## Logistic regression
+
+### Remarks on the logistic regression model:
+
