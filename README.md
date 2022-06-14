@@ -140,36 +140,8 @@ I will build two model using Logistic regression and random forest. The advatage
 ## Logistic regression
 
 ![confusion_matrix_lr](Results/confusion_matrix_lr.png)
+![Classification report_lr](Results/Classification_report_lr.png)
 
--------------------------------------------
-Classification report for the training set:
-              precision    recall  f1-score   support
-
-           0       0.76      0.77      0.76      6396
-           1       0.77      0.75      0.76      6396
-
-    accuracy                           0.76     12792
-   macro avg       0.76      0.76      0.76     12792
-weighted avg       0.76      0.76      0.76     12792
-
--------------------------------------------
-
-
-
-´´´
--------------------------------------------
-Classification report for the test set:
-              precision    recall  f1-score   support
-
-           0       0.92      0.77      0.84      1567
-           1       0.48      0.75      0.58       433
-
-    accuracy                           0.77      2000
-   macro avg       0.70      0.76      0.71      2000
-weighted avg       0.82      0.77      0.78      2000
-
--------------------------------------------
-´´´
 
 ### Remarks on the logistic regression model:
 
