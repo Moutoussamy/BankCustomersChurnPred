@@ -33,7 +33,7 @@ First, I look at the proportion of customers who left the company on this datase
 
 It appears that 20.4% of the customers left the bank in this dataset. We can see an ovwerrepresentation of the retained costumers in this dataset, this imbalance can bias the modeling.
 
-## Categorical variables 
+### Categorical variables 
 
 ![HeatMapCatFeatures](Results/HeatMapCatFeatures.png)
 
@@ -42,4 +42,16 @@ Here, the catgorical variables gives us some interresting information:
 - The churn rate is higher for the german costumers (highest churn rate). French and Spanish customers have the same churn rate. It could be interesting to put the spanish and the french in the same group.
 - Having a credit do not to be a key feature for the customer churn
 - As expected, non-active members present a higher chrun rate.
+
+### Continuous variables
+
+![violinPlot_continuous](Results/violinPlot_continuous.png)
+
+Here, the continuous variables gives us some interresting information:
+- The credits score do not seems to be different between the churned and retained costumers.
+- The average age of the retained costumers seems to be lower than the churned costumers.
+- The tenure do not seems to be different between the churned and retained costumers.
+- We can see a clear difference in the balance of the churned and retained costumers.
+- The retained costumers present mostly one or two products.
+- The estimated salary do not seems to be different between the churned and retained costumers.
 
