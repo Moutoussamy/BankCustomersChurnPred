@@ -1,7 +1,7 @@
 # BankCustomersChurnPred
 
-#### FOR THE PYTHON CODE; PLEASE LOOK AT THE JUPYTER NOTEBOOK: BankCustomersChurnPred.ipynb
 ![bank_costumer_churn_prediction](Results/bank_costumer_churn_prediction.png)
+#### FOR THE PYTHON CODE, PLEASE LOOK AT THE JUPYTER NOTEBOOK: BankCustomersChurnPred.ipynb
 
 ### Author: Emmanuel Edouard Moutoussamy (https://tinyurl.com/3f7ddem8)
 
