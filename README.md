@@ -32,3 +32,12 @@ First, I look at the proportion of customers who left the company on this datase
 ![donut_churn_percent](Results/donut_churn_percent.png)
 
 It appears that 20.4% of the customers left the bank in this dataset. We can see an ovwerrepresentation of the retained costumers in this dataset, this imbalance can bias the modeling.
+
+## Categorical variables 
+
+Here, the catgorical variables gives us some interresting information:
+- The churn rate is higher for women than men
+- The churn rate is higher for the german costumers (highest churn rate). French and Spanish customers have the same churn rate. It could be interesting to put the spanish and the french in the same group.
+- Having a credit do not to be a key feature for the customer churn
+- As expected, non-active members present a higher chrun rate.
+
