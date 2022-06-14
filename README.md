@@ -156,7 +156,7 @@ weighted avg       0.76      0.76      0.76     12792
 
 
 
-
+´´´
 -------------------------------------------
 Classification report for the test set:
               precision    recall  f1-score   support
@@ -169,7 +169,7 @@ Classification report for the test set:
 weighted avg       0.82      0.77      0.78      2000
 
 -------------------------------------------
-
+´´´
 
 ### Remarks on the logistic regression model:
 
