@@ -35,6 +35,8 @@ It appears that 20.4% of the customers left the bank in this dataset. We can see
 
 ## Categorical variables 
 
+![HeatMapCatFeatures](Results/HeatMapCatFeatures.png)
+
 Here, the catgorical variables gives us some interresting information:
 - The churn rate is higher for women than men
 - The churn rate is higher for the german costumers (highest churn rate). French and Spanish customers have the same churn rate. It could be interesting to put the spanish and the french in the same group.
