@@ -140,12 +140,11 @@ I will build two model using Logistic regression and random forest. The advatage
 ## Logistic regression
 
 ![confusion_matrix_lr](Results/confusion_matrix_lr.png)
-![Classification report_lr](Results/Classification_report_lr.png)
 
 
 ### Remarks on the logistic regression model:
 
-We obtained a precision of 
+We obtained a precision of 0.70
 
 ## Random Forest
 
@@ -157,3 +156,12 @@ We obtained a precision of
 
 # Conclusion
 
+In this project, I built a model to predict the bank costumer churn. First, I explore the dataset, I found that:
+- The churn rate is higher for the german costumers (highest churn rate). French and Spanish customers have the same churn rate. 
+- Having a credit is not key feature for the customer churn
+- Non-active members present a higher chrun rate
+- The average age of the retained costumers seems to be lower than the churned costumers
+- We can see a clear difference in the balance of the churned and retained costumers
+- The retained costumers present mostly one or two products
+
+The importance analysis with the random forest methods confirm these observation.
