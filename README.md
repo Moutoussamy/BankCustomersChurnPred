@@ -14,3 +14,21 @@ The dataset used is availbale on Kaggle: https://tinyurl.com/ud43n28s
 ### 3. Data preprocessing
 ### 4. Model building and assessment
 
+## 1. Introduction
+### What is costumer churn ?
+
+" customer churn occurs when customers or subscribers stop doing business with a company or service. Also known as customer attrition, customer churn is a critical metric because it is much less expensive to retain existing customers than it is to acquire new customers " - Molly Galetto (https://tinyurl.com/yjs9shrk)
+
+
+
+Customer churn is a critical metric for banks. In this project, I will dig into the data, visualise them and build a model to predict the costumer churn. I will use a random forest and logistic regression algorithm.
+
+## 2. Data exploration 
+
+### Data visualisation
+
+First, I look at the proportion of customers who left the company on this dataset:
+
+![donut_churn_percent](Results/donut_churn_percent.png)
+
+It appears that 20.4% of the customers left the bank in this dataset. We can see an ovwerrepresentation of the retained costumers in this dataset, this imbalance can bias the modeling.
