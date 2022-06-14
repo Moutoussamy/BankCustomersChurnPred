@@ -1,5 +1,6 @@
 # BankCustomersChurnPred
- 
+
+## FOR THE PYTHON CODE; PLEASE LOOK AT THE JUPYTER NOTEBOOK: BankCustomersChurnPred.ipynb
 ![bank_costumer_churn_prediction](Results/bank_costumer_churn_prediction.png)
 
 ### Author: Emmanuel Edouard Moutoussamy (https://tinyurl.com/3f7ddem8)
@@ -8,22 +9,47 @@ The goal of this project is to (1) detect the descriptor that influence the cost
 The dataset used is availbale on Kaggle: https://tinyurl.com/ud43n28s
 
 
-#### Summary:
-### 1. Introduction
-### 2. Data exploration
-### 3. Data preprocessing
-### 4. Model building and assessment
+### Summary:
+1. Introduction
+2. Data exploration
+3. Data preprocessing
+4. Model building and assessment
 
 ## 1. Introduction
 ### What is costumer churn ?
 
-" customer churn occurs when customers or subscribers stop doing business with a company or service. Also known as customer attrition, customer churn is a critical metric because it is much less expensive to retain existing customers than it is to acquire new customers " - Molly Galetto (https://tinyurl.com/yjs9shrk)
+" Customer churn occurs when customers or subscribers stop doing business with a company or service. Also known as customer attrition, customer churn is a critical metric because it is much less expensive to retain existing customers than it is to acquire new customers " - Molly Galetto (https://tinyurl.com/yjs9shrk)
 
 
 
-Customer churn is a critical metric for banks. In this project, I will dig into the data, visualise them and build a model to predict the costumer churn. I will use a random forest and logistic regression algorithm.
+Customer churn is a critical metric for banks. Indeed, a costumers leaving represents a significant investment lost. Both time and effort need to be channelled into replacing them. The prediction of the costumer churn is a powerful tool for the bank to avoid this lost.
+
+In this project, I will dig into the data, visualise them and build a model to predict the costumer churn. I will use a random forest and logistic regression algorithm.
 
 ## 2. Data exploration 
+
+Here is the descriptors avaible on the data set:
+
+RowNumber          10000 non-null int64
+CustomerId         10000 non-null int64
+Surname            10000 non-null object
+CreditScore        10000 non-null int64
+Geography          10000 non-null object
+Gender             10000 non-null object
+Age                10000 non-null int64
+Tenure             10000 non-null int64
+Balance            10000 non-null float64
+NumOfProducts      10000 non-null int64
+HasCrCard          10000 non-null int64
+IsActiveMember     10000 non-null int64
+EstimatedSalary    10000 non-null float64
+Exited             10000 non-null int64
+
+There are 14 descriptors and 10000 entry. There is no missing values on the dataset (Good news 🥳)
+
+However, we can see that some descriptors are useless for the purpose of this project. Indeed, the row number, the customer id, and the surname do not play a role in the customer churn. These descriptors will be remove for the rest of the project.
+
+we can distinguished two type of descriptors: continuous and categorical descritors. I will visualise them separately.
 
 ### Data visualisation
 
@@ -31,24 +57,24 @@ First, I look at the proportion of customers who left the company on this datase
 
 ![donut_churn_percent](Results/donut_churn_percent.png)
 
-It appears that 20.4% of the customers left the bank in this dataset. We can see an ovwerrepresentation of the retained costumers in this dataset, this imbalance can bias the modeling.
+It appears that 20.4% of the customers left the bank in this dataset. We can see an over-representation of the retained costumers in this dataset, this imbalance can bias the modeling.
 
 ### Categorical variables 
 
 ![HeatMapCatFeatures](Results/HeatMapCatFeatures.png)
 
-Here, the catgorical variables gives us some interresting information:
+Here, the catgorical variables gives us some interesting information:
 - The churn rate is higher for women than men
-- The churn rate is higher for the german costumers (highest churn rate). French and Spanish customers have the same churn rate. It could be interesting to put the spanish and the french in the same group.
-- Having a credit do not to be a key feature for the customer churn
-- As expected, non-active members present a higher chrun rate.
+- The churn rate is higher for the german costumers (highest churn rate). French and Spanish customers have the same churn rate. It could be interesting to put the spanish and the french in the same group
+- Having a credit is not key feature for the customer churn
+- As expected, non-active members present a higher chrun rate
 
 ### Continuous variables
 
 ![violinPlot_continuous](Results/violinPlot_continuous.png)
 
 Here, the continuous variables gives us some interresting information:
-- The credits score do not seems to be different between the churned and retained costumers.
+- The credits score is not different between the churned and retained costumers.
 - The average age of the retained costumers seems to be lower than the churned costumers.
 - The tenure do not seems to be different between the churned and retained costumers.
 - We can see a clear difference in the balance of the churned and retained costumers.
@@ -79,7 +105,9 @@ I noticed that the costumers with a non-null balance are part of the retained co
 
 # 3. Data preprocessing
 
-## Descriptor  Engineering
+## Descriptor engineering
+
+In this section I will create new descriptors based on the last section.
 
 I made two observations on the continuous variables:
 
@@ -103,7 +131,7 @@ Encoding of:
 
 ## Scaling the continuous descriptors
 
-I will scale the continuous descriptors with the standard Scaler.
+I will scale the continuous descriptors with the Min Max Scaler.
 
 # Models Building
 
