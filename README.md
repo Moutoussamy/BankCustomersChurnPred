@@ -109,5 +109,17 @@ I will scale the continuous descriptors with the standard Scaler.
 
 ## Logistic regression
 
+![confusion_matrix_lr](Results/confusion_matrix_lr.png)
+
 ### Remarks on the logistic regression model:
+
+## Random Forest
+
+![confusion_matrix_RF](Results/confusion_matrix_RF.png)
+
+## Importance of each descriptors
+
+![importance_RF](Results/importance_RF.png)
+
+# Conclusion
 
