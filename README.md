@@ -140,7 +140,7 @@ I will build two model using Logistic regression and random forest. The advatage
 ## Logistic regression
 
 ![confusion_matrix_lr](Results/confusion_matrix_lr.png)
-![Classification report_lr](Results/Classification report_lr.png)
+![Classification report_lr](Results/Classification_report_lr.png)
 
 
 ### Remarks on the logistic regression model:
