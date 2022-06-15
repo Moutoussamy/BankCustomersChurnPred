@@ -71,15 +71,12 @@ Here, the categorical variables gives us some interesting information:
 
 Now let's test the correlation:
 
-| Variable	         Chi-square	    p-value
+| Variable	       |  Chi-square   |	p-value.   |
 |:-----------------|:-------------:|--------------:|
-| Geography        |  301.255337   | 3.830318e-66
-|------------------|---------------|---------------|
-| IsActiveMember   |  242.985342   | 8.785858e-55
-|------------------|---------------|---------------|
-| Gender	       |   112.918571  | 2.248210e-26
-|------------------|---------------|---------------|
-| HasCrCard            	0.471338	 4.923724e-01
+| Geography        |  301.255337   | 3.830318e-66. |
+| IsActiveMember   |  242.985342   | 8.785858e-55. |
+| Gender	       |   112.918571  | 2.248210e-26. |
+| HasCrCard        |  	0.471338   | 4.923724e-01. |
 
 
 
