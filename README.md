@@ -20,7 +20,7 @@ The dataset used is available on Kaggle: https://tinyurl.com/ud43n28s
 
 " Customer churn occurs when customers or subscribers stop doing business with a company or service. Also known as customer attrition, customer churn is a critical metric because it is much less expensive to retain existing customers than it is to acquire new customers " - Molly Galetto (https://tinyurl.com/yjs9shrk)
 
-Customer churn is a critical metric for banks. Indeed, a costumer leaving represents a significant investment lost. Both time and effort need to be channelled into replacing them. The prediction of the customer churn is a powerful tool for the bank to avoid this lost.
+Customer churn is a critical metric for banks. Indeed, a custmer leaving represents a significant investment lost. Both time and effort need to be channelled into replacing them. The prediction of the customer churn is a powerful tool for the bank to avoid this lost.
 
 In this project, I will dig into the data, visualize them and build a model to predict the customer churn. I will use a random forest and logistic regression algorithm.
 
