@@ -16,7 +16,7 @@ The dataset used is available on Kaggle: https://tinyurl.com/ud43n28s
 4. Model building and assessment
 
 ## 1. Introduction
-### What is costumer churn ?
+### What is custumer churn ?
 
 " Customer churn occurs when customers or subscribers stop doing business with a company or service. Also known as customer attrition, customer churn is a critical metric because it is much less expensive to retain existing customers than it is to acquire new customers " - Molly Galetto (https://tinyurl.com/yjs9shrk)
 
