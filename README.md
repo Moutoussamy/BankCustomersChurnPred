@@ -57,15 +57,15 @@ First, I look at the proportion of customers who left the company on this datase
 
 ![donut_churn_percent](Results/donut_churn_percent.png)
 
-It appears that 20.4% of the customers left the bank in this dataset. We can see an over-representation of the retained costumers in this dataset, this imbalance can bias the modeling.
+It appears that 20.4% of the customers left the bank in this dataset. We can see an over-representation of the retained customers in this dataset, this imbalance can bias the modeling.
 
 ### Categorical variables 
 
 ![HeatMapCatFeatures](Results/HeatMapCatFeatures.png)
 
-Here, the catgorical variables gives us some interesting information:
+Here, the categorical variables gives us some interesting information:
 - The churn rate is higher for women than men
-- The churn rate is higher for the german costumers (highest churn rate). French and Spanish customers have the same churn rate. It could be interesting to put the spanish and the french in the same group
+- The churn rate is higher for the german customers (highest churn rate). French and Spanish customers have the same churn rate. It could be interesting to put the spanish and the french in the same group
 - Having a credit is not key feature for the customer churn
 - As expected, non-active members present a higher chrun rate
 
@@ -74,34 +74,34 @@ Here, the catgorical variables gives us some interesting information:
 ![violinPlot_continuous](Results/violinPlot_continuous.png)
 
 Here, the continuous variables gives us some interresting information:
-- The credits score is not different between the churned and retained costumers.
-- The average age of the retained costumers seems to be lower than the churned costumers.
-- The tenure do not seems to be different between the churned and retained costumers.
-- We can see a clear difference in the balance of the churned and retained costumers.
-- The retained costumers present mostly one or two products.
-- The estimated salary do not seems to be different between the churned and retained costumers.
+- The credits score is not different between the churned and retained customers.
+- The average age of the retained customers seems to be lower than the churned customers.
+- The tenure do not seems to be different between the churned and retained customers.
+- We can see a clear difference in the balance of the churned and retained customers.
+- The retained customers present mostly one or two products.
+- The estimated salary do not seems to be different between the churned and retained customers.
 
 #### let's check the density of Age and Balance descriptors:
 
 ##### Age
 ![density_age](Results/density_age.png)
 
-    The avgerage age of churned costumers is 44.84 against 37.41 for the retained costumers
+    The avgerage age of churned customers is 44.84 against 37.41 for the retained customers
 
-Indeed, the average age of the cherned costumers is higher than the retained costumers (37 vs 45).
+Indeed, the average age of the cherned customers is higher than the retained customers (37 vs 45).
 This information is crucial for the modeling.
 
 ##### Balance
 
 ![Density_Balances](Results/Density_Balance.png)
 
-    The avgerage age of churned costumers is 91108.54 against 72745.3 for the retained costumers
+    The avgerage age of churned customers is 91108.54 against 72745.3 for the retained customers
 
-For the balcance, we can see two peaks both distributions: 0 and around 125 000. we can see that there are more costumers with a balance = 0 that stayed on the bank. This is even more visble on the following barplot:
+For the balcance, we can see two peaks both distributions: 0 and around 125 000. we can see that there are more customers with a balance = 0 that stayed on the bank. This is even more visble on the following barplot:
 
 ![count_balance_zeros](Results/count_balance_zeros.png)
 
-I noticed that the costumers with a non-null balance are part of the retained costumers. Let's make a categorical variable based on this information.
+I noticed that the customers with a non-null balance are part of the retained customers. Let's make a categorical variable based on this information.
 
 # 3. Data preprocessing
 
@@ -111,8 +111,8 @@ In this section I will create new descriptors based on the last section.
 
 I made two observations on the continuous variables:
 
-(1) Costumers with a high number of products tend to leave the bank
-(2) Costumers with a balance non-null tend to leave the bank
+(1) customers with a high number of products tend to leave the bank
+(2) customers with a balance non-null tend to leave the bank
 
 let's make two descriptors based on these observations
 
@@ -125,8 +125,8 @@ Based of the last analysis we point out some non-essential features: 'Tenure', '
 Encoding of: 
 
 - The gender (1: Male;0: female)
-- Geography. As Mentioned above, I will merge spain and french costumers (0: Spain + France; 1: Germany)
-- for the active members, I will change the coding for -1 when the costumers is an aactive member.
+- Geography. As Mentioned above, I will merge spain and french customers (0: Spain + France; 1: Germany)
+- for the active members, I will change the coding for -1 when the customers is an aactive member.
 
 
 ## Scaling the continuous descriptors
@@ -156,12 +156,12 @@ We obtained a precision of 0.70
 
 # Conclusion
 
-In this project, I built a model to predict the bank costumer churn. First, I explore the dataset, I found that:
-- The churn rate is higher for the german costumers (highest churn rate). French and Spanish customers have the same churn rate. 
+In this project, I built a model to predict the bank customer churn. First, I explore the dataset, I found that:
+- The churn rate is higher for the german customers (highest churn rate). French and Spanish customers have the same churn rate. 
 - Having a credit is not key feature for the customer churn
 - Non-active members present a higher chrun rate
-- The average age of the retained costumers seems to be lower than the churned costumers
-- We can see a clear difference in the balance of the churned and retained costumers
-- The retained costumers present mostly one or two products
+- The average age of the retained customers seems to be lower than the churned customers
+- We can see a clear difference in the balance of the churned and retained customers
+- The retained customers present mostly one or two products
 
 The importance analysis with the random forest methods confirm these observation.
