@@ -79,6 +79,8 @@ Now let's test the correlation:
 | HasCrCard        |  	0.471338   | 4.923724e-01. |
 
 
+The chi2 test confirm that having a credit card is not a key feature here. I will remove it.
+
 
 ### Continuous variables
 
@@ -108,7 +110,7 @@ This information is crucial for the modeling.
 
     The avgerage age of churned customers is 91108.54 against 72745.3 for the retained customers
 
-For the balcance, we can see two peaks both distributions: 0 and around 125 000. we can see that there are more customers with a balance = 0 that stayed on the bank. This is even more visble on the following barplot:
+For the balance, we can see two peaks both distributions: 0 and around 125 000. we can see that there are more customers with a balance = 0 that stayed on the bank. This is even more visble on the following barplot:
 
 ![count_balance_zeros](Results/count_balance_zeros.png)
 
@@ -149,16 +151,16 @@ I will scale the continuous descriptors with the Min Max Scaler.
 I will build two model using Logistic regression and random forest. The advatage of random forest is that we can extract the importance of each descriptor for the model.
 
 ## Logistic regression
+I found the best parameters using GridSearch:
+{'C': 0.5, 'fit_intercept': True, 'intercept_scaling': 1, 'max_iter': 250, 'penalty': 'l2', 'tol': 1e-05}
 
 ![confusion_matrix_lr](Results/confusion_matrix_lr.png)
 
-
-### Remarks on the logistic regression model:
-
-We obtained a precision of 0.70
-
 ## Random Forest
-
+I found the best parameters using GridSearch:
+RandomForestClassifier(max_depth=8, max_features=8, min_samples_leaf=2,
+                       min_samples_split=5, n_estimators=50)
+                       
 ![confusion_matrix_RF](Results/confusion_matrix_RF.png)
 
 ## Importance of each descriptors
