@@ -165,19 +165,33 @@ RandomForestClassifier(max_depth=8, max_features=8, min_samples_leaf=2,
 
 ## Importance of each descriptors
 
+With the Random Forest, it is possible to access to the relative importance of each descriptor with respect to the others.
+
 ![importance_RF](Results/importance_RF.png)
+
+Here are the descriptors by order of importance:
+
+    1. Age
+    2. Number of products
+    3. Balance
+    4. is active member
+    5. High number of products
+    6. Geography
+    7. Credit score
+    8. Gender
+    9. balance zeros
 
 # Conclusion
 
-In this project, I built a model to predict the bank customer churn. First, I explore the dataset, I found that:
-- The churn rate is higher for the german customers (highest churn rate). French and Spanish customers have the same churn rate. 
+In this project, I built a model to predict the bank customer churn. First, I explore the dataset and I found that:
+
+- The churn rate is higher for the german customers (highest churn rate). French and Spanish customers have the same churn rate.
 - Having a credit is not key feature for the customer churn
 - Non-active members present a higher chrun rate
 - The average age of the retained customers seems to be lower than the churned customers
 - We can see a clear difference in the balance of the churned and retained customers
 - The retained customers present mostly one or two products
+- The importance analysis with the random forest methods confirm these observation. The most impotant descriptors for the customer churn prediction is the age.
 
-The importance analysis with the random forest methods confirm these observation. The most impotant descriptors for the customer churn prediction is the age.
-We made models for the churn prediction with a prescision of XX and a recall of XX.
-
+We made models for the churn prediction with a prescision around 0.7 and a recall around 0.7. Hower, we can note that the precision of the RF model to predict the churn clients is low (0.53).
 Here, we work on data on a given time point. A more meaningful model can be created with time average data. We can also add more descriptors such as the prescence of saving accounts or the numbers of debit/credit cards.
