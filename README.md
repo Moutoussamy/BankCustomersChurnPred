@@ -28,7 +28,7 @@ In this project, I will dig into the data, visualise them and build a model to p
 
 ## 2. Data exploration 
 
-Here is the descriptors avaible on the data set:
+Here is the descriptors available on the data set:
 
 - RowNumber          10000 non-null int64
 - CustomerId         10000 non-null int64
@@ -68,6 +68,20 @@ Here, the categorical variables gives us some interesting information:
 - The churn rate is higher for the german customers (highest churn rate). French and Spanish customers have the same churn rate. It could be interesting to put the spanish and the french in the same group
 - Having a credit is not key feature for the customer churn
 - As expected, non-active members present a higher chrun rate
+
+Now let's test the correlation:
+
+| Variable	         Chi-square	    p-value
+|:-----------------|:-------------:|--------------:|
+| Geography        |  301.255337.  | 3.830318e-66
+|------------------|---------------|---------------|
+| IsActiveMember   |  242.985342   | 8.785858e-55
+|------------------|---------------|---------------|
+| Gender	       |   112.918571  | 2.248210e-26
+|------------------|---------------|---------------|
+| HasCrCard            	0.471338	 4.923724e-01
+
+
 
 ### Continuous variables
 
