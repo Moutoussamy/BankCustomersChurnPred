@@ -30,20 +30,20 @@ In this project, I will dig into the data, visualise them and build a model to p
 
 Here is the descriptors avaible on the data set:
 
-RowNumber          10000 non-null int64
-CustomerId         10000 non-null int64
-Surname            10000 non-null object
-CreditScore        10000 non-null int64
-Geography          10000 non-null object
-Gender             10000 non-null object
-Age                10000 non-null int64
-Tenure             10000 non-null int64
-Balance            10000 non-null float64
-NumOfProducts      10000 non-null int64
-HasCrCard          10000 non-null int64
-IsActiveMember     10000 non-null int64
-EstimatedSalary    10000 non-null float64
-Exited             10000 non-null int64
+- RowNumber          10000 non-null int64
+- CustomerId         10000 non-null int64
+- Surname            10000 non-null object
+- CreditScore        10000 non-null int64
+- Geography          10000 non-null object
+- Gender             10000 non-null object
+- Age                10000 non-null int64
+- Tenure             10000 non-null int64
+- Balance            10000 non-null float64
+- NumOfProducts      10000 non-null int64
+- HasCrCard          10000 non-null int64
+- IsActiveMember     10000 non-null int64
+- EstimatedSalary    10000 non-null float64
+- Exited             10000 non-null int64
 
 There are 14 descriptors and 10000 entry. There is no missing values on the dataset (Good news 🥳)
 
