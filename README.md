@@ -88,7 +88,7 @@ Here, the continuous variables gives us some interresting information:
 
     The avgerage age of churned customers is 44.84 against 37.41 for the retained customers
 
-Indeed, the average age of the cherned customers is higher than the retained customers (37 vs 45).
+Indeed, the average age of the churned customers is higher than the retained customers (37 vs 45).
 This information is crucial for the modeling.
 
 ##### Balance
@@ -164,4 +164,7 @@ In this project, I built a model to predict the bank customer churn. First, I ex
 - We can see a clear difference in the balance of the churned and retained customers
 - The retained customers present mostly one or two products
 
-The importance analysis with the random forest methods confirm these observation.
+The importance analysis with the random forest methods confirm these observation. The most impotant descriptors for the customer churn prediction is the age.
+We made models for the churn prediction with a prescision of XX and a recall of XX.
+
+Here, we work on data on a given time point. A more meaningful model can be created with time average data. We can also add more descriptors such as the prescence of saving accounts or the numbers of debit/credit cards.
