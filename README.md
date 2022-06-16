@@ -1,4 +1,4 @@
-# BankCustomersChurnPred
+# Bank Customers Churn Prediction
 
 ![bank_costumer_churn_prediction](Results/bank_costumer_churn_prediction.png)
 #### FOR THE PYTHON CODE, PLEASE LOOK AT THE JUPYTER NOTEBOOK: BankCustomersChurnPred.ipynb
