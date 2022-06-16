@@ -5,7 +5,7 @@
 
 ### Author: Emmanuel Edouard Moutoussamy (https://tinyurl.com/3f7ddem8)
 
-The goal of this project is to (1) detect the descriptor that influence the customer churn and (2) build a model to predict the customer churn.
+The goal of this project is to (1) detect the descriptors that influence the customer churn and (2) build a model to predict the customer churn.
 The dataset used is available on Kaggle: https://tinyurl.com/ud43n28s
 
 
